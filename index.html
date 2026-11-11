@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <title>THE DESIGNER'S VAULT — El último proyecto</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="The Designer's Vault, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 36 36"><path d="M8 15h20v16H8zM11 15v-4a7 7 0 0 1 14 0v4M18 21v5"/><circle cx="18" cy="21" r="1.5"/></svg>
+      </span>
+      <span><strong>THE DESIGNER'S VAULT</strong><small>EL ÚLTIMO PROYECTO</small></span>
+    </a>
+    <div class="header-actions">
+      <span id="team-chip" class="team-chip hidden"></span>
+      <button id="sound-toggle" class="icon-button" type="button" aria-label="Activar o silenciar sonidos" title="Sonido activado">
+        <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4H4zm12-2a6 6 0 0 1 0 8m2-11a10 10 0 0 1 0 14"/></svg>
+        <svg class="sound-off hidden" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4H4zm12 1 5 5m0-5-5 5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="screen-start" class="screen start-screen" aria-labelledby="start-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> ARCHIVO CLASIFICADO · ACCESO RESTRINGIDO</p>
+        <h1 id="start-title">THE DESIGNER'S<br><span>VAULT</span></h1>
+        <p class="hero-subtitle">EL ÚLTIMO PROYECTO</p>
+        <p class="intro">Un diseñador desapareció dejando su obra maestra bajo diez sistemas de seguridad. Investiguen sus pistas, conecten ideas y recuperen el proyecto antes de que el archivo se borre para siempre.</p>
+        <div class="mission-facts">
+          <div><span class="fact-icon">10</span><span><b>10 CANDADOS</b><small>Desafíos de diseño</small></span></div>
+          <div><span class="fact-icon fact-time">45′</span><span><b>TIEMPO LÍMITE</b><small>Una misión en equipo</small></span></div>
+        </div>
+        <form id="start-form" class="start-form">
+          <label for="team-name">IDENTIFICACIÓN DEL EQUIPO</label>
+          <div class="input-row">
+            <input id="team-name" name="team" type="text" maxlength="32" placeholder="Ej. Los tipógrafos" autocomplete="off" required>
+            <button class="button button-gold" type="submit">INICIAR MISIÓN <span aria-hidden="true">↗</span></button>
+          </div>
+          <button id="resume-button" class="text-button hidden" type="button">Continuar misión guardada</button>
+        </form>
+        <p id="storage-warning" class="storage-warning hidden" role="status"></p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="vault-illustration">
+          <div class="vault-topline"><span>DV–1978</span><span>SECURE ARCHIVE</span></div>
+          <div class="vault-door">
+            <div class="vault-inner">
+              <div class="dial"><i></i><b></b><span></span></div>
+              <div class="bolt bolt-a"></div><div class="bolt bolt-b"></div><div class="bolt bolt-c"></div><div class="bolt bolt-d"></div>
+            </div>
+            <div class="vault-handle"></div>
+          </div>
+          <div class="vault-base">MASTER FILE&nbsp; / &nbsp;NO. 010</div>
+        </div>
+        <span class="floating-label label-one">SYSTEM LOCKED <i></i></span>
+        <span class="floating-label label-two">EST. 1978</span>
+        <span class="crosshair crosshair-one">+</span><span class="crosshair crosshair-two">+</span>
+      </div>
+      <footer class="start-footer"><span>UNA EXPERIENCIA DE INVESTIGACIÓN Y DISEÑO</span><span>EDICIÓN 01 <i></i></span></footer>
+    </section>
+
+    <section id="screen-map" class="screen hidden" aria-labelledby="map-title">
+      <div class="screen-heading map-heading">
+        <div><p class="eyebrow">PANEL DE SEGURIDAD <span class="heading-line"></span></p><h2 id="map-title">Mapa de acceso</h2><p class="muted">Cada pista abre el camino al siguiente sistema.</p></div>
+        <div class="timer-card"><span class="timer-label"><i class="status-dot"></i> TIEMPO RESTANTE</span><strong id="map-timer">45:00</strong></div>
+      </div>
+      <div class="progress-panel">
+        <div class="progress-meta"><span><b id="progress-count">0 / 10</b> CANDADOS ABIERTOS</span><span id="current-lock-label">PRÓXIMO: CANDADO 01</span></div>
+        <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+      </div>
+      <div id="lock-grid" class="lock-grid" aria-label="Mapa de los diez candados"></div>
+      <div class="map-bottom"><span class="map-note"><span class="tiny-shield">◆</span> Resuelvan en equipo. Solo el siguiente candado está disponible.</span><button id="new-game-map" class="text-button" type="button">Reiniciar misión</button></div>
+    </section>
+
+    <section id="screen-challenge" class="screen hidden" aria-labelledby="challenge-title">
+      <div class="challenge-top">
+        <button id="back-to-map" class="back-button" type="button"><span aria-hidden="true">←</span> MAPA</button>
+        <div class="challenge-timer"><span>TIEMPO</span><strong id="challenge-timer">45:00</strong></div>
+      </div>
+      <div id="challenge-content" class="challenge-layout"></div>
+    </section>
+
+    <section id="screen-vault" class="screen hidden" aria-labelledby="vault-title">
+      <div class="vault-finale">
+        <p class="eyebrow"><span class="status-dot success-dot"></span> TODOS LOS SISTEMAS SUPERADOS</p>
+        <h2 id="vault-title">THE <span>MASTERPIECE</span></h2>
+        <p class="finale-copy">Han conseguido recuperar todas las claves de seguridad.<br>El archivo maestro está a punto de abrirse.</p>
+        <div id="final-safe" class="final-safe" aria-label="Caja fuerte cerrada">
+          <div class="safe-door">
+            <div class="safe-ring"><div class="safe-dial"><i></i></div></div>
+            <div class="safe-handle"></div>
+            <span class="safe-bolt safe-bolt-1"></span><span class="safe-bolt safe-bolt-2"></span><span class="safe-bolt safe-bolt-3"></span><span class="safe-bolt safe-bolt-4"></span>
+          </div>
+          <div class="safe-glow"></div>
+        </div>
+        <button id="open-vault" class="button button-gold open-vault-button" type="button">ABRIR LA CAJA FUERTE <span aria-hidden="true">↗</span></button>
+        <div id="vault-reward" class="vault-reward hidden" aria-live="polite">
+          <p class="eyebrow">ARCHIVO RECUPERADO</p>
+          <h3>¡MISIÓN CUMPLIDA!</h3>
+          <p>Han recuperado el último proyecto del diseñador.</p>
+          <button id="show-results" class="button button-outline" type="button">VER RESULTADOS</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-results" class="screen hidden" aria-labelledby="results-title">
+      <div class="results-card">
+        <p class="eyebrow"><span class="status-dot success-dot"></span> INFORME DE MISIÓN</p>
+        <h2 id="results-title">ARCHIVO <span>RECUPERADO</span></h2>
+        <p id="result-message" class="result-message"></p>
+        <div id="result-team" class="result-team"></div>
+        <div class="result-stats">
+          <div><span>TIEMPO EMPLEADO</span><strong id="result-time">—</strong><small>Incluye penalizaciones</small></div>
+          <div><span>RESPUESTAS INCORRECTAS</span><strong id="result-errors">0</strong><small>Intentos registrados</small></div>
+          <div><span>PISTAS UTILIZADAS</span><strong id="result-hints">0</strong><small>Colaborar también es diseñar</small></div>
+        </div>
+        <p id="result-outcome" class="result-outcome"></p>
+        <button id="restart-button" class="button button-gold" type="button">INICIAR UNA NUEVA MISIÓN <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

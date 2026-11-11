@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <title>Respuestas — THE DESIGNER'S VAULT</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #10131c;
+      --panel: #1b202b;
+      --gold: #d9ad57;
+      --text: #ece9e1;
+      --muted: #aeb2bb;
+      --green: #49c58b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 48px 20px;
+      color: var(--text);
+      background: radial-gradient(ellipse at 70% 0, #252b38 0, var(--bg) 55%);
+      font: 16px/1.65 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    }
+    main { width: min(850px, 100%); margin: 0 auto; }
+    .eyebrow { color: var(--gold); font: 11px monospace; letter-spacing: .15em; }
+    h1 { margin: 10px 0 4px; font-size: clamp(30px, 6vw, 48px); line-height: 1.1; }
+    h1 span { color: var(--gold); }
+    .subtitle { margin: 0 0 30px; color: var(--muted); }
+    ol { margin: 0; padding: 0; list-style: none; counter-reset: locks; }
+    li {
+      counter-increment: locks;
+      margin: 14px 0;
+      padding: 19px 22px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-left: 2px solid rgba(217,173,87,.7);
+      border-radius: 5px;
+      background: rgba(27,32,43,.86);
+    }
+    h2 { margin: 0 0 11px; color: var(--gold); font-size: 15px; letter-spacing: .08em; }
+    h2::before { content: "0" counter(locks) " / "; font: 12px monospace; }
+    p { margin: 8px 0 0; color: var(--muted); }
+    p strong { color: var(--text); }
+    .answer { color: var(--green); font-weight: 700; }
+    .back { display: inline-block; margin-top: 24px; color: var(--gold); text-underline-offset: 4px; }
+    @media print {
+      :root { color-scheme: light; --bg: #fff; --panel: #fff; --text: #111; --muted: #444; --gold: #76520d; --green: #17613d; }
+      body { padding: 0; color: #111; background: #fff; font-size: 12pt; }
+      li { break-inside: avoid; border-color: #bbb; background: #fff; }
+      .back { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">MATERIAL PARA ADMINISTRACIÓN</p>
+    <h1>THE DESIGNER'S <span>VAULT</span></h1>
+    <p class="subtitle">El último proyecto · Preguntas y respuestas</p>
+
+    <ol>
+      <li>
+        <h2>TYPOGRAPHY</h2>
+        <p><strong>Pregunta:</strong> Soy una tipografía geométrica sans serif, muy utilizada en diseño gráfico, cartelería e interfaces. Fui inspirada en la tipografía urbana de un barrio de Buenos Aires. ¿Cuál es mi nombre?</p>
+        <p><strong>Respuesta:</strong> <span class="answer">Montserrat</span></p>
+      </li>
+      <li>
+        <h2>COLOR LAB</h2>
+        <p><strong>Pregunta:</strong> ¿Cuál es el código hexadecimal de este color? Escribí el código sin espacios.</p>
+        <p><strong>Respuesta:</strong> <span class="answer">#CAD2E7</span> (también se acepta CAD2E7)</p>
+      </li>
+      <li>
+        <h2>RGB DETECTIVE</h2>
+        <p><strong>Pregunta:</strong> ¿Qué color se obtiene con esta combinación de luz RGB?</p>
+        <p><strong>Respuesta:</strong> <span class="answer">Rojo</span></p>
+      </li>
+      <li>
+        <h2>THE GRID</h2>
+        <p><strong>Pregunta:</strong> ¿Cómo se llama el sistema de líneas y módulos que permite organizar los elementos de una composición editorial?</p>
+        <p><strong>Respuestas aceptadas:</strong> <span class="answer">Retícula, reticula o grid</span></p>
+      </li>
+      <li>
+        <h2>VISUAL LANGUAGE</h2>
+        <p><strong>Pregunta:</strong> ¿Qué concepto representa tradicionalmente este símbolo?</p>
+        <p><strong>Respuesta:</strong> <span class="answer">Paz</span></p>
+      </li>
+      <li>
+        <h2>BRAND IDENTITY</h2>
+        <p><strong>Pregunta:</strong> ¿Cómo se denomina este tipo de identificador visual de marca?</p>
+        <p><strong>Respuesta:</strong> <span class="answer">Isotipo</span></p>
+      </li>
+      <li>
+        <h2>THE EYE</h2>
+        <p><strong>Pregunta:</strong> ¿Qué principio del diseño permite establecer niveles de importancia entre los elementos de una composición?</p>
+        <p><strong>Respuestas aceptadas:</strong> <span class="answer">Jerarquía visual o jerarquía</span></p>
+      </li>
+      <li>
+        <h2>DATA VISUALIZATION</h2>
+        <p><strong>Pregunta:</strong> ¿Cómo se denomina este tipo de representación visual de datos?</p>
+        <p><strong>Respuestas aceptadas:</strong> <span class="answer">Gráfico de barras, diagrama de barras o barras</span></p>
+      </li>
+      <li>
+        <h2>THE GLOSSARY</h2>
+        <p><strong>Pregunta:</strong> Soy una composición de imágenes, colores, texturas y tipografías que permite reunir referencias visuales y transmitir la dirección estética de un proyecto. ¿Qué soy?</p>
+        <p><strong>Respuestas aceptadas:</strong> <span class="answer">Moodboard, mood board o tablero de inspiración</span></p>
+      </li>
+      <li>
+        <h2>CREATIVE MIND</h2>
+        <p><strong>Pregunta:</strong> Antes de comenzar un proyecto de diseño, el profesional recibe un documento que establece los objetivos, requisitos, público destinatario y necesidades del cliente. ¿Cómo se denomina este documento?</p>
+        <p><strong>Respuestas aceptadas:</strong> <span class="answer">Brief, brief creativo o brief de diseño</span></p>
+      </li>
+    </ol>
+    <a class="back" href="index.html">← Volver a la misión</a>
+  </main>
+</body>
+</html>
